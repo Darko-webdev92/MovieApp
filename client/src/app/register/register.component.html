@@ -1,0 +1,75 @@
+<!-- <div class="row">
+	<div class="col-md-6 offset-md-3 mt-4">
+		<h3>Register</h3>
+            <form [formGroup]="registerForm" (submit)="OnSubmit()">
+            <div class="form-group">
+				<label for="firstName">First Name</label>
+				<input type="text" name="firstName" class="form-control"
+					   id="firstName" placeholder="Enter First Name"   formControlName="FirstName">
+			</div>
+            <div class="form-group">
+				<label for="lastName">First Name</label>
+				<input type="text" name="lastName" class="form-control"
+					   id="lastName" placeholder="Enter Last Name"  formControlName="LastName"  >
+			</div>
+			<div class="form-group">
+				<label for="registerUsername">Username</label>
+				<input type="text" name="username" class="form-control"
+					   id="registerUsername" placeholder="Enter username"formControlName="Username"  >
+			</div>
+			<div class="form-group">
+				<label for="registerPassword">Password</label>
+				<input type="password" name="password"  required class="form-control"
+					   id="registerPassword" placeholder="Password" formControlName="Password">
+			</div>
+            <div class="form-group">
+				<label for="confirmPassword">Confirm Password</label>
+				<input type="password" name="confirm-password"  required class="form-control"
+					   id="confirmPassword" placeholder="Confirm Password" formControlName="ConfirmPassword" >
+			</div>
+			<button type="submit" class="btn btn-primary">Register <i class="fas fa-sign-in-alt"></i></button>
+		</form>
+	</div>
+</div> -->
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-wrap p-4 p-md-5">
+              <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-user-o"></span>
+              </div>
+              <h3 class="text-center mb-4">Register</h3>
+                    <form  [formGroup]="registerForm" (submit)="OnSubmit()" class="login-form">
+                  <div class="form-group">
+					<input type="text" name="firstName" class="form-control"
+					id="firstName" placeholder="Enter First Name"   formControlName="FirstName">
+                  </div>
+                  <div class="form-group">
+					<input type="text" name="lastName" class="form-control"
+					id="lastName" placeholder="Enter Last Name"  formControlName="LastName"  >
+                  </div>
+                  <div class="form-group">
+					<input type="text" name="username" class="form-control"
+					id="registerUsername" placeholder="Enter username"formControlName="Username"  >
+                  </div>
+
+				  <div class="form-group">
+					<input type="password" name="password"  required class="form-control"
+						   id="registerPassword" placeholder="Password" formControlName="Password">
+				</div>
+				<div class="form-group">
+					<input type="password" name="confirm-password"  required class="form-control"
+						   id="confirmPassword" placeholder="Confirm Password" formControlName="ConfirmPassword" >
+				</div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary rounded submit p-3 px-5">Register</button>
+            </div>
+          </form>
+        </div>
+            </div>
+        </div>
+    </div>
+</section>

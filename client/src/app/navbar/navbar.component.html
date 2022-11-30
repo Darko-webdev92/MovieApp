@@ -1,0 +1,40 @@
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logo </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['Home']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['Movies']" *ngIf="authService.IsloggedIn()">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['newMovie']" *ngIf="authService.IsloggedIn()">Add new Movie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['moviesByUser']" *ngIf="authService.IsloggedIn()">My Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['moviesByGenre']" *ngIf="authService.IsloggedIn()">Movies By Genre</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" [routerLink]="['login']"*ngIf="!authService.IsloggedIn()">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" [routerLink]="['register']"  *ngIf="!authService.IsloggedIn()">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" (click)="logout()"  [routerLink]="['Register']"  *ngIf="authService.IsloggedIn()">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,37 @@
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-wrap p-4 p-md-5">
+              <h3 class="text-center mb-4">Add new Movie</h3>
+                    <form [formGroup]="createMovie" (submit)="OnSubmit()"  class="login-form">
+						<div class="form-group">
+							<input type="text" name="title" class="form-control" id="title" placeholder="Title" formControlName="Title">
+						</div>
+						<div class="form-group">
+							<input type="number" name="Year" class="form-control"
+								   id="Year" placeholder="Enter Year"  formControlName="Year"  >
+						</div>
+						<div class="form-group">
+							<textarea type="text" name="username" class="form-control"
+								   id="Description" placeholder="Enter Description" formControlName="Description"  >
+								</textarea>
+						</div>
+						<div class="form-group">
+							<label for="genre">Select genre </label>
+							<select id="genre"  class="form-control" #movie (change)="genreChange(movie)" formControlName="Genre">
+								<option value="" disabled>Choose a genre</option>
+								<option *ngFor="let genre of genreOptions" [ngValue]="movie">
+									{{ genre }}
+								</option>
+							</select>
+						</div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary rounded submit p-3 px-5">Add New Movie</button>
+            </div>
+          </form>
+        </div>
+            </div>
+        </div>
+    </div>
+</section>
